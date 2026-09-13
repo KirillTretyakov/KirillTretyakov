@@ -45,6 +45,10 @@ I build backend services, data pipelines, integrations and AI-powered applicatio
 ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat&logo=oracle&logoColor=white)
 ![PL/SQL](https://img.shields.io/badge/PL%2FSQL-F80000?style=flat&logo=oracle&logoColor=white)
 
+## 🎓 Stepik
+
+![Stepik Stats](./assets/stepik-stats.svg)
+
 
 ## 📊 GitHub Stats
 
