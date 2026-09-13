@@ -1,16 +1,25 @@
-## Hi there 👋
+# 👋 Hi, I'm Kirill
 
-<!--
-**KirillTretyakov/KirillTretyakov** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### Python Developer | Data Analyst | AI & LLM
 
-Here are some ideas to get you started:
+I build backend services, data pipelines, integrations and AI-powered applications.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+--- 
+
+## 👨‍💻 About Me
+
+- 🐍 Python Developer
+- 📊 Data Analysis & Data Processing
+- 🤖 LLM, RAG & AI Agents
+- ⚙️ Backend & Microservices
+- 🔌 API integrations
+- 🗄️ PostgreSQL, Greenplum, MySQL, Oracle
+- 🐳 Docker, Linux
+
+- ## 🛠 Tech Stack
+- ### Backend
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat)
