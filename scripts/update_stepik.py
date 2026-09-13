@@ -10,6 +10,12 @@ CLIENT_ID = os.environ["STEPIK_CLIENT_ID"]
 CLIENT_SECRET = os.environ["STEPIK_CLIENT_SECRET"]
 USER_ID = os.environ["STEPIK_USER_ID"]
 
+print("CLIENT_ID exists:", bool(CLIENT_ID))
+print("CLIENT_ID length:", len(CLIENT_ID))
+
+print("CLIENT_SECRET exists:", bool(CLIENT_SECRET))
+print("CLIENT_SECRET length:", len(CLIENT_SECRET))
+
 
 def get_access_token() -> str:
     response = requests.post(
