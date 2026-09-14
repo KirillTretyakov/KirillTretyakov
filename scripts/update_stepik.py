@@ -47,16 +47,34 @@ def get_user(token: str) -> dict:
 
     return data["users"][0]
 
+def get_activity_summary(token: str) -> dict:
+    response = requests.get(
+        f"{API_HOST}/api/user-activity-summaries/{USER_ID}",
+        headers={
+            "Authorization": f"Bearer {token}",
+        },
+        timeout=30,
+    )
 
-def generate_svg(user: dict) -> str:
+    response.raise_for_status()
+
+    data = response.json()
+
+    return data["user-activity-summaries"][0]
+
+
+def generate_svg(user: dict, activity: dict) -> str:
     knowledge = user.get("knowledge", 0)
     reputation = user.get("reputation", 0)
+
+    current_streak = activity.get("recent_strike", 0)
+    max_streak = activity.get("max_strike", 0)
 
     return f"""
 <svg
     width="500"
-    height="170"
-    viewBox="0 0 500 170"
+    height="240"
+    viewBox="0 0 500 240"
     xmlns="http://www.w3.org/2000/svg"
 >
     <style>
@@ -81,7 +99,7 @@ def generate_svg(user: dict) -> str:
         y="0.5"
         rx="8"
         width="499"
-        height="169"
+        height="239"
         fill="#0d1117"
         stroke="#30363d"
     />
@@ -102,6 +120,22 @@ def generate_svg(user: dict) -> str:
         Reputation
     </text>
 
+    <text x="25" y="160" class="label">
+    Current streak
+    </text>
+
+    <text x="210" y="160" class="value">
+        {current_streak} days
+    </text>
+
+    <text x="25" y="200" class="label">
+        Best streak
+    </text>
+
+    <text x="210" y="200" class="value">
+        {max_streak} days
+    </text>
+
     <text x="210" y="125" class="value">
         {reputation}
     </text>
@@ -113,6 +147,8 @@ def main():
     token = get_access_token()
 
     user = get_user(token)
+    activity = get_activity_summary(token)
+
 
     print(
         "Available Stepik user fields:",
